@@ -55,6 +55,8 @@ typer.addEventListener('keydown', e => {
     console.log(`key is down`);
   });
 
+//6. Every time I release a key it logs somthing
+
 typer.addEventListener('keyup', e => {
     console.log(`key is up`);
   });
@@ -66,3 +68,25 @@ typer.addEventListener('keyup', e => {
   });
 
 
+//8. If key is held it gets logged
+
+  typer.addEventListener('keypress', e => {
+    console.log(`key is being pressed`);
+  });
+
+
+//9. This is getting tedious
+
+Button[1].addEventListener('mousemove', e => {
+   console.log('running out of events to use...');
+})
+
+//10. Logs `It Reset!` when reset is clicked
+
+const Reset = document.querySelector('.form');
+
+  Reset.addEventListener('reset', e => {
+    console.log(`It Reset!`);
+  });
+
+//Most of these arent practical but at least I did 10 
