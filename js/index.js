@@ -75,7 +75,7 @@ typer.addEventListener('keyup', e => {
   });
 
 
-//9. This is getting tedious
+//9. This is getting tedious..
 
 Button[1].addEventListener('mousemove', e => {
    console.log('running out of events to use...');
@@ -89,4 +89,34 @@ const Reset = document.querySelector('.form');
     console.log(`It Reset!`);
   });
 
+
 //Most of these arent practical but at least I did 10 
+
+
+// vvv - Introheader is nested inside Intro
+// vvv - Click Introheader and only it changes instead of both (comment out stopPropagation(); to see difference)
+
+const IntroHeader = document.querySelector(".home .intro h2");
+
+IntroHeader.addEventListener('click', e => {
+    IntroHeader.style.backgroundColor = 'red';
+    e.stopPropagation();
+});
+
+const Intro = document.querySelector(".intro");
+
+Intro.addEventListener('click', e => {
+    Intro.style.backgroundColor = 'blue';
+});
+
+// vvv - navs no longer reset the page :)
+
+let NavLinks = document.querySelectorAll(".nav-link");
+
+NavLinks.forEach(item => {
+    item.addEventListener('click', e => {
+        e.preventDefault();
+    })
+});
+
+//  ======================================================
